@@ -1,0 +1,7 @@
+set(target_name "client")
+
+file(GLOB_RECURSE SRCS "*.cpp")
+file(GLOB_RECURSE HDRS "*.h")
+
+add_executable(${target_name} ${SRCS} ${HDRS})
+
