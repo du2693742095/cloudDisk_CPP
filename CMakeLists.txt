@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(CloudDisk LANGUAGES C CXX)
+#project(CloudDisk LANGUAGE C CXX)
+project(CloudDisk)
 
 set(CMAKE_CXX_STANDARD 11)
 

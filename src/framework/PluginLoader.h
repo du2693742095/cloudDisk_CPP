@@ -14,4 +14,4 @@ private:
   void* m_dlHandle; // Handle to the dynamic library (cross-platform)
 };
 
-#enfid
+#endif
