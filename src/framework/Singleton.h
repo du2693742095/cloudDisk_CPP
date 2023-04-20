@@ -5,6 +5,9 @@
  * @date 2023-04-20
  */
 
+#ifndef __SINGLETON_H__
+#define __SINGLETON_H__
+
 /**
  * @brief Singleton class template
  * @tparam T The type of the class to be a singleton
@@ -26,3 +29,5 @@ protected:
     Singleton(){}
 
 };
+
+#endif

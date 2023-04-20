@@ -1,3 +1,10 @@
+/**
+ * @file PluginLoader.h
+ * @brief 插件加载类
+ * @author lemon 
+ * @date 2023-04-20
+ */
+
 #ifndef __PLUGINLOADER_H__
 #define __PLUGINLOADER_H__
 
