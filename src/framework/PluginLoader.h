@@ -1,6 +1,9 @@
 #ifndef __PLUGINLOADER_H__
 #define __PLUGINLOADER_H__
 
+#include <string>
+#include <vector>
+#include "PluginInterface.h"
 
 class PluginLoader {
 public:

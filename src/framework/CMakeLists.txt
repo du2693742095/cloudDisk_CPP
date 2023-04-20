@@ -5,6 +5,11 @@ file(GLOB_RECURSE HDRS "*.h")
 
 add_library(${target_name} STATIC ${SRCS} ${HDRS})
 
-target_include_directories(${target_name} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-target_link_libraries(${target_name} PUBLIC ${CMAKE_DL_LIBS})
-target_compile_definitions(${target_name} PRIVATE -DUNICODE -D_UNICODE)
+
+
+# 将小写字符变为大写
+string(TOUPPER ${target_name} target_name_upper)
+target_compile_definitions(${target_name} 
+    PRIVATE
+        ${target_name_upper}_EXPORTS
+)
