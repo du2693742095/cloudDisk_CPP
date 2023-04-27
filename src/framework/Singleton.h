@@ -8,6 +8,9 @@
 #ifndef __SINGLETON_H__
 #define __SINGLETON_H__
 
+namespace Framework
+{
+    
 /**
  * @brief Singleton class template
  * @tparam T The type of the class to be a singleton
@@ -29,5 +32,7 @@ protected:
     Singleton(){}
 
 };
+
+}
 
 #endif

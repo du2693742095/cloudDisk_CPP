@@ -1,5 +1,8 @@
 output/
 build/
+out/
+.vscode/
+.vs/
 
 # Prerequisites
 *.d

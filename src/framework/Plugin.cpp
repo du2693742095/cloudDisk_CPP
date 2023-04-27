@@ -1,6 +1,8 @@
 // Plugin.cpp
 #include "PluginInterface.h"
 
+namespace Framework {
+
 class MyPlugin : public PluginInterface {
 public:
   void init() override {
@@ -18,4 +20,6 @@ extern "C" {
   PluginInterface* createPlugin() {
     return new MyPlugin();
   }
+}
+
 }
