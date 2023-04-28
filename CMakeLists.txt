@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 #project(CloudDisk LANGUAGE C CXX)
 project(CloudDisk)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 
 message(STATUS "======== welcome to CloudDisk =======")
 
@@ -24,6 +24,7 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${OUTPUT_DIR})
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${OUTPUT_DIR})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${OUTPUT_DIR})
 
+set(THIRDPARTY_DIR ${PROJECT_SOURCE_DIR}/src/3thparty)
 
 add_subdirectory(src)
 

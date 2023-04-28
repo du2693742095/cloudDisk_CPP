@@ -11,15 +11,15 @@
 // 实现Windows与Linux的导入导出宏
 #ifdef _WIN32
     #ifdef LOG_EXPORT
-        #define FRAMEWORKAPI __declspec(dllexport)
+        #define LOGAPI __declspec(dllexport)
     #else
-        #define EXPFRAMEWORKAPIORT __declspec(dllimport)
+        #define LOGAPI __declspec(dllimport)
     #endif
 #else
     #ifdef LOG_EXPORT
-        #define FRAMEWORKAPI __attribute__((visibility("default")))
+        #define LOGAPI __attribute__((visibility("default")))
     #else
-        #define FRAMEWORKAPI
+        #define LOGAPI
     #endif
 #endif
 

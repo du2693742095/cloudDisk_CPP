@@ -8,9 +8,12 @@
 #ifndef __PLUGININTERFACE_H__
 #define __PLUGININTERFACE_H__
 
+#include "FrameWorkGlobal.h"
+#include "Singleton.h"
+
 namespace Framework
 {
-  class PluginInterface
+  class FRAMEWORKAPI PluginInterface: public Singleton<PluginInterface>
   {
   public:
     virtual void init() = 0;

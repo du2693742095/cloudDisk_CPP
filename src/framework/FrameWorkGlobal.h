@@ -13,7 +13,7 @@
     #ifdef FRAMEWORK_EXPORT
         #define FRAMEWORKAPI __declspec(dllexport)
     #else
-        #define EXPFRAMEWORKAPIORT __declspec(dllimport)
+        #define FRAMEWORKAPI __declspec(dllimport)
     #endif
 #else
     #ifdef FRAMEWORK_EXPORT

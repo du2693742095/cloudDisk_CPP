@@ -40,6 +40,7 @@ namespace Framework
     std::map<std::string, PluginInterface *> m_plugins;
     void *m_dlHandle; // Handle to the dynamic library (cross-platform)
   };
+
 } // namespace CloudDisk
 
 #endif

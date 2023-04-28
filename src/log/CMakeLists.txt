@@ -3,24 +3,23 @@ set(target_name "log")
 file(GLOB_RECURSE SRCS "*.cpp")
 file(GLOB_RECURSE HDRS "*.h")
 
-set(LOG4CPP_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/log4cpp")
-set(LOG4CPP_LIB_DIR "${SRC_DIR}/3thparty/log4cpp")
 
 add_library(${target_name} SHARED ${SRCS} ${HDRS})
 
-target_include_directories(${target_name}
-    PUBLIC
-        ${LOG4CPP_DIR}
-)
+set(log4cplus_DIR "${THIRDPARTY_DIR}/log4cplus/lib/cmake/log4cplus")
+find_package(log4cplus REQUIRED)
+if(log4cplus_FOUND)
+	message("found log4cplus! ")
+endif()
 
 target_link_libraries(${target_name}
     PUBLIC
-        ${LOG4CPP_LIB_DIR}
+        log4cplus::log4cplusU
 )
 
-# Ω´–°–¥◊÷∑˚±‰Œ™¥Û–¥
+# Â§ßÂ∞èÂÜôËΩ¨Êç¢
 string(TOUPPER ${target_name} target_name_upper)
 target_compile_definitions(${target_name} 
-    PRIVATE
-        ${target_name_upper}_EXPORTS
+    PUBLIC
+        ${target_name_upper}_EXPORT
 )

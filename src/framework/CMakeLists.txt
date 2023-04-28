@@ -12,3 +12,4 @@ target_compile_definitions(${target_name}
     PRIVATE
         ${target_name_upper}_EXPORT
 )
+message(STATUS "${target_name_upper}_EXPORT")
